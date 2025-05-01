@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:riverpod/config/router/app_router.dart';
-import 'package:riverpod/config/theme/app_theme.dart';
+import 'package:riverpod_intro/config/router/app_router.dart';
+import 'package:riverpod_intro/config/theme/app_theme.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(ProviderScope(child: const MainApp()));
 }
 
 class MainApp extends StatelessWidget {

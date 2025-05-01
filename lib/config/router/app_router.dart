@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 
-import 'package:riverpod/presentation/screens/screens.dart';
+import 'package:riverpod_intro/presentation/screens/screens.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
@@ -57,6 +57,12 @@ final appRouter = GoRouter(
       path: '/infinite',
       name: InfiniteScrollScreen.name,
       builder: (context, state) => InfiniteScrollScreen(),
+    ),
+
+    GoRoute(
+      path: '/counter',
+      name: CounterScreen.name,
+      builder: (context, state) => CounterScreen(),
     ),
   ],
 );

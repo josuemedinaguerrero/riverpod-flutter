@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'package:riverpod/config/menu/menu_items.dart';
-import 'package:riverpod/presentation/widgets/side_menu.dart';
+import 'package:riverpod_intro/config/menu/menu_items.dart';
+import 'package:riverpod_intro/presentation/widgets/side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String name = 'home_screen';
@@ -11,10 +11,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaffoldKey = GlobalKey<ScaffoldState>();
+
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(title: Text('Flutter + Material 3')),
       body: _HomeView(),
-      drawer: SideMenu(),
+      drawer: SideMenu(scaffoldKey: scaffoldKey),
     );
   }
 }
