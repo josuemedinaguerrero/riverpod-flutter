@@ -1,3 +1,4 @@
+export 'package:riverpod_intro/presentation/screens/theme_changer/theme_changer_screen.dart';
 export 'package:riverpod_intro/presentation/screens/counter/counter_screen.dart';
 export 'package:riverpod_intro/presentation/screens/animated/animated_screen.dart';
 export 'package:riverpod_intro/presentation/screens/app_tutorial/app_tutorial_screen.dart';
